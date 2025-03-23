@@ -1,0 +1,31 @@
+<section class="container">
+    <h1 class="text-center bold">{{title}}</h1>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+                <input type="hidden" formControlName="_id">
+                <div class="form-group mb-4">
+                    <label for="first_name">Nombre Usuario</label>
+                    <input type="text" class="form-control" id="first_name" placeholder="Ingrese su nombre" formControlName="first_name">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="last_name">Apellido Usuario</label>
+                    <input type="text" class="form-control" id="last_name" placeholder="Ingrese su apellido" formControlName="last_name">                
+                </div>
+                <div class="form-group mb-4">
+                    <label for="email">Email Usuario</label>
+                    <input type="text" class="form-control" id="email" placeholder="Ingrese su email" formControlName="email">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="image">Imagen Usuario</label>
+                    <input type="text" class="form-control" id="image" placeholder="Ingrese una URL de imagen (si no, se asignara automáticamente)" formControlName="image">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" class="btn btn-primary" [value]="userForm.get('_id')?.value ? 'Actualizar' : 'Registrar'">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+

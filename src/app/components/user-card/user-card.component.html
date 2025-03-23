@@ -1,0 +1,13 @@
+<div class="card h-100 w-100">
+    <figure class="text-center p-3"> 
+        <img [src]="miUser.image" [alt]="miUser.first_name" class="img-fluid rounded-circle w-75 text-center"> 
+    </figure>
+    <div class="card-body text-align-center">
+        <h5 class="card-title text-center">{{miUser.first_name}} {{miUser.last_name}} </h5>
+    </div>
+    <div class="d-flex justify-content-around p-3">
+      <button class="btn btn-primary" [routerLink]="['/info-user', miUser._id]">Ver más</button>
+      <button class="btn btn-warning" [routerLink]="['/update-user', miUser._id]">Editar</button>
+      <button class="btn btn-danger" (click)="deleteUser(miUser._id)">Borrar</button> 
+    </div>
+</div>
