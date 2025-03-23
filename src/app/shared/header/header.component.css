@@ -1,3 +1,22 @@
-.logo{
+.logo {
     max-width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-link-custom {
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link-custom:hover {
+    background-color: rgba(0, 123, 255, 0.1);
 }
